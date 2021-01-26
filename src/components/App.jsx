@@ -1,18 +1,21 @@
 import React from "react";
-import Login from "./Login.jsx";
+//import Login from "./Login.jsx";
 
-var isLoggedIn = false;
+//var isLoggedIn = false;
 
-// function renderConditionally() {
-//   if (isLoggedIn === true) {
-//     return <h1>Hello </h1>;
-//   } else {
-//     return <Login />;
-//   }
-// }
+const currentTime = new Date().getHours();
+console.log(currentTime);
+
 function App() {
   return (
-    <div className="container">{isLoggedIn ? <h1>Hello</h1> : <Login />}</div>
+    <div className="container">
+      {
+        //Ternary
+        // isLoggedIn ? <h1>Hello</h1> : <Login />
+        //AND Operator
+        currentTime > 12 && <h1>why are you still working?</h1>
+      }
+    </div>
   );
 }
 
